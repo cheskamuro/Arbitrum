@@ -113,14 +113,15 @@ export default function Home() {
         alignItems: 'flex-start',
         justifyContent: 'center',
         minHeight: '100vh',
-        backgroundImage: "url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=996&t=st=1709366263~exp=1709366863~hmac=0a09d8a6612b7ec8dc30d9b53b7aefb29faad0a00c28ae831f96ded5b7f539b1')",
+        backgroundImage: "url('https://wallpaperset.com/w/full/2/f/c/466272.jpg')",
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
       }}>
       <div style={{
         background: 'url(https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148549780.jpg?size=626&ext=jpg) center center / cover',
         border: 'solid black',
-        padding: '181px',
+        padding: '149px',
         textAlign: 'center'
       }}>
         {/* Button to connect wallet */}
