@@ -121,7 +121,7 @@ export default function Home() {
       <div style={{
         background: 'url(https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148549780.jpg?size=626&ext=jpg) center center / cover',
         border: 'solid black',
-        padding: '149px',
+        padding: '180px',
         textAlign: 'center'
       }}>
         {/* Button to connect wallet */}
