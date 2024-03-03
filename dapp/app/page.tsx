@@ -106,85 +106,14 @@ export default function Home() {
   };
 
   return (
-    <main 
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        backgroundImage: "url('https://wallpaperset.com/w/full/2/f/c/466272.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
-      <div style={{
-        background: 'url(https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148549780.jpg?size=626&ext=jpg) center center / cover',
-        border: 'solid black',
-        padding: '180px',
-        textAlign: 'center'
-      }}>
-        {/* Button to connect wallet */}
-        <button 
-          onClick={() => { connectWallet(); }}
-          className="p-3 bg-violet-800 text-white rounded"
-        >
-          {walletKey !== "" ? walletKey : " Connect wallet"}
-        </button>
-  
-        {/* Minting section */}
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <br></br>
-          {/* Input for minting amount */}
-          <input
-            type="text"
-            value={mintingAmount}
-            onChange={(e) => mintAmountChange(e)}
-            style={{ color: "Black" }}
-            placeholder="Mint amount here"
-          />
-          {/* Button to initiate minting */}
-          <button
-            onClick={() => { mintCoin(); }}
-            className="p-3 bg-violet-800 text-white rounded"
-          >
-            {"Mint"}
-          </button>
-        </div>
-        <br></br>
-  
-        {/* Staking section */}
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {/* Input for staking amount */}
-          <input
-            type="text"
-            value={stakingAmount}
-            onChange={(e) => stakeAmountChange(e)}
-            style={{ color: "Black" }}
-            placeholder="Stake amount here"
-          />
-          {/* Button to initiate staking */}
-          <button
-            onClick={stakeCoin}
-            className="p-3 bg-violet-800 text-white rounded"
-          >
-            {"Stake"}
-          </button>
-        </div>
-  
-        {/* Withdrawal section */}
-        <div style={{ textAlign: 'center' }}>
-          <br />
-          <br />
-          {/* Button to initiate withdrawal */}
-          <button
-            onClick={withdrawCoin}
-            className="p-2 bg-violet-800 text-white rounded"
-          >
-            {"Withdraw"}
-          </button>
-        </div>
-      </div>
-    </main>
+<main style={{display:'flex',flexDirection:'column',alignItems:'flex-start',justifyContent:'center',minHeight:'100vh',backgroundImage:"url('https://wallpaperset.com/w/full/2/f/c/466272.jpg')",backgroundSize:'cover',backgroundPosition:'center',backgroundAttachment:'fixed'}}>
+  <div style={{background:'url(https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148549780.jpg?size=626&ext=jpg) center center / cover',border:'solid black',padding:'180px',textAlign:'center'}}>
+    <button onClick={connectWallet} className="p-3 bg-violet-800 text-white rounded">{walletKey || 'Connect wallet'}</button>
+    <div style={{display:'flex',flexDirection:'column'}}><br/><input type="text" value={mintingAmount} onChange={(e)=>mintAmountChange(e)} style={{color:'Black'}} placeholder="Mint amount here"/><button onClick={mintCoin} className="p-3 bg-violet-800 text-white rounded">Mint</button></div><br/>
+    <div style={{display:'flex',flexDirection:'column'}}><input type="text" value={stakingAmount} onChange={(e)=>stakeAmountChange(e)} style={{color:'Black'}} placeholder="Stake amount here"/><button onClick={stakeCoin} className="p-3 bg-violet-800 text-white rounded">Stake</button></div>
+    <div style={{textAlign:'center'}}><br/><br/><button onClick={withdrawCoin} className="p-2 bg-violet-800 text-white rounded">Withdraw</button></div>
+  </div>
+</main>
+
   );
 }
